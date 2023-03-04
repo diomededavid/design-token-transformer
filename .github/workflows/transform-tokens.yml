@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # this lets us work in the actual repository
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       # if the folder named "tokens" does not exist, create it
       - name: mkdir "tokens" directory
         # change tokens here (and in line 32) if you want to use a differently named folder
@@ -32,7 +32,7 @@ jobs:
           dir: 'tokens'
       # we now initialize node to run amazon style dictionary to compile the tokens
       - name: Use Node.js 19.x
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           # we use version 19.x of node
           node-version: 19.x
